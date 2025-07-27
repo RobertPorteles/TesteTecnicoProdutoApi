@@ -38,6 +38,7 @@ Facilidade para testes unitários: é mais fácil testar transformações de dad
 Aderência ao princípio SRP (Single Responsibility Principle).
 
 📁 **Localização**
+
 <img width="832" height="312" alt="image" src="https://github.com/user-attachments/assets/ebeda6cd-949b-4597-8b2c-ddfcddef00a9" />
 
 🔧 Exemplo de métodos presentes:

@@ -38,9 +38,6 @@ Facilidade para testes unitários: é mais fácil testar transformações de dad
 Aderência ao princípio SRP (Single Responsibility Principle).
 
 📁 Localização
-text
-Copiar
-Editar
 src/
 └── main/
     └── java/
@@ -53,12 +50,11 @@ src/
             └── service/
                 └── ProdutoServiceImpl.java
 🔧 Exemplo de métodos presentes:
-java
-Copiar
-Editar
+
 public Produto toEntity(ProdutoRequest produtoRequest)
 public ProdutoResponse toResponse(Produto produto)
-public void updateEntityFromRequest(ProdutoRequest req, Produto produto)
+public void updateEntityFromRequest(ProdutoRequest produtoRequest, Produto produto)
 public Produto achaPorId(UUID id)
+
 Com isso, a classe ProdutoServiceImpl foca apenas na regra de negócio, delegando a transformação de dados para o mapper.
 

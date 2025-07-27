@@ -1,6 +1,6 @@
 <img width="712" height="653" alt="image" src="https://github.com/user-attachments/assets/d258834f-faa4-4e50-a5ac-ee369231c57b" />
 
-🧭 Interpretação do seu diagrama
+🧭 Interpretação do Meu diagrama
 🔹 HL – High Level (Regra de Negócio / Domain)
 Essa é a camada de alto nível, que contém:
 
@@ -25,10 +25,10 @@ A implementação concreta ProdutoServiceImpl
 🧩 ProdutoMapper – Separando a Lógica de Conversão
 Para manter a classe ProdutoServiceImpl limpa e com responsabilidade única, foi criado o pacote mappers, contendo a classe ProdutoMapper.
 
-✅ Objetivo
-A ProdutoMapper centraliza a lógica de conversão entre os objetos de domínio (Produto) e os objetos de entrada e saída da API (ProdutoRequest e ProdutoResponse), além de encapsular lógicas auxiliares como atualização e busca por ID.
+✅ **Objetivo**
+O ProdutoMapper centraliza a lógica de conversão entre os objetos de domínio (Produto) e os objetos de entrada e saída da API (ProdutoRequest e ProdutoResponse), além de encapsular lógicas auxiliares como atualização e busca por ID.
 
-🚀 Benefícios
+🚀 **Benefícios**
 Organização: separa responsabilidades, evitando que a service fique sobrecarregada com lógica de mapeamento.
 
 Reutilização: os métodos toEntity, toResponse e updateEntityFromRequest podem ser usados em qualquer parte da aplicação que precise dessas conversões.
@@ -37,18 +37,9 @@ Facilidade para testes unitários: é mais fácil testar transformações de dad
 
 Aderência ao princípio SRP (Single Responsibility Principle).
 
-📁 Localização
-src/
-└── main/
-    └── java/
-        └── br/com/estudo/
-            ├── domain/
-            │   ├── dtos/
-            │   ├── entities/
-            │   └── mappers/
-            │       └── ProdutoMapper.java
-            └── service/
-                └── ProdutoServiceImpl.java
+📁 **Localização**
+<img width="832" height="312" alt="image" src="https://github.com/user-attachments/assets/ebeda6cd-949b-4597-8b2c-ddfcddef00a9" />
+
 🔧 Exemplo de métodos presentes:
 
 public Produto toEntity(ProdutoRequest produtoRequest)

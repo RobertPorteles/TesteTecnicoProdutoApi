@@ -17,6 +17,7 @@ import br.com.estudo.domain.dtos.DashboardResponse;
 import br.com.estudo.domain.dtos.ProdutoRequest;
 import br.com.estudo.domain.dtos.ProdutoResponse;
 import br.com.estudo.domain.interfaces.ProdutoService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("api/produto/v1/")
@@ -39,14 +40,14 @@ public class ProdutoController {
 	    return produtoService.gerarDashboard();
 	}
 	@PostMapping("/cadastrar")
-	public ProdutoResponse cadastrarProduto(@RequestBody ProdutoRequest produtoRequest) {
+	public ProdutoResponse cadastrarProduto(@RequestBody @Valid ProdutoRequest produtoRequest) {
 		
 		return produtoService.salvar(produtoRequest);
 	}
 	
 	
 	@PutMapping("/atualizar/{id}")
-	public ProdutoResponse atualizarProduto(@PathVariable UUID id, @RequestBody ProdutoRequest produtoRequest) {
+	public ProdutoResponse atualizarProduto(@PathVariable UUID id, @RequestBody @Valid ProdutoRequest produtoRequest) {
 		return produtoService.atualizarProduto(id, produtoRequest);
 	}
 	@DeleteMapping("/deletar{id}")

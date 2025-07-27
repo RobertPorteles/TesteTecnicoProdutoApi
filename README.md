@@ -44,8 +44,11 @@ Aderência ao princípio SRP (Single Responsibility Principle).
 🔧 Exemplo de métodos presentes:
 
 public Produto toEntity(ProdutoRequest produtoRequest)
+
 public ProdutoResponse toResponse(Produto produto)
+
 public void updateEntityFromRequest(ProdutoRequest produtoRequest, Produto produto)
+
 public Produto achaPorId(UUID id)
 
 Com isso, a classe ProdutoServiceImpl foca apenas na regra de negócio, delegando a transformação de dados para o mapper.

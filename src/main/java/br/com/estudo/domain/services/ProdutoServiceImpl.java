@@ -1,4 +1,4 @@
-package br.com.estudo.service;
+package br.com.estudo.domain.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,6 @@ import br.com.estudo.domain.entities.Tipo;
 import br.com.estudo.domain.interfaces.ProdutoService;
 import br.com.estudo.domain.mappers.ProdutoMapper;
 import br.com.estudo.repositories.ProdutoRepository;
-
 
 @Service
 public class ProdutoServiceImpl implements ProdutoService {

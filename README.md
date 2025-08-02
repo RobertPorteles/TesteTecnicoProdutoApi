@@ -1,3 +1,41 @@
+                    DOMAIN DRIVER DESIGN :
+                    
+```    
+src/
+└── main/
+    ├── java/
+    │   └── br/
+    │       └── com/
+    │           └── estudo/
+    │               ├── configurations/             # Configurações gerais da aplicação (CORS, etc)
+    │               │   └── CorsConfiguration.java
+    │               ├── controllers/                # Controladores REST que processam as requisições
+    │               │   └── ProdutoController.java
+    │               ├── domain/                     # Domínio da aplicação
+    │               │   ├── dtos/                   # DTOs (requisições e respostas de produtos e dashboard)
+    │               │   │   ├── DashboardResponse.java
+    │               │   │   ├── ProdutoRequest.java
+    │               │   │   └── ProdutoResponse.java
+    │               │   ├── entities/               # Entidades JPA que representam o modelo de dados
+    │               │   │   ├── Produto.java
+    │               │   │   └── Tipo.java
+    │               │   ├── interfaces/             # Interfaces para abstração da lógica de serviços
+    │               │   │   └── ProdutoService.java
+    │               │   ├── mappers/                # Conversão entre entidades e DTOs
+    │               │   │   └── ProdutoMapper.java
+    │               │   └── services/               # Implementações da lógica de negócio
+    │               │       └── ProdutoServiceImpl.java
+    │               ├── handlers/                   # Tratamento de exceções da aplicação
+    │               │   └── GlobalExceptionHandler.java
+    │               ├── repositories/               # Repositórios JPA para acesso ao banco
+    │               │   └── ProdutoRepository.java
+    │               └── TesteTecnicoProdutoApiApplication.java  # Classe principal da aplicação
+    │
+    └── resources/
+        └── application.properties                  # Arquivo de configuração do Spring Boot
+```
+
+
 <img width="712" height="653" alt="image" src="https://github.com/user-attachments/assets/d258834f-faa4-4e50-a5ac-ee369231c57b" />
 
 🧭 Interpretação do Meu diagrama
@@ -37,9 +75,6 @@ Facilidade para testes unitários: é mais fácil testar transformações de dad
 
 Aderência ao princípio SRP (Single Responsibility Principle).
 
-📁 **Localização**
-
-<img width="832" height="312" alt="image" src="https://github.com/user-attachments/assets/ebeda6cd-949b-4597-8b2c-ddfcddef00a9" />
 
 🔧 Exemplo de métodos presentes:
 
